@@ -9,6 +9,7 @@ body {
 
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner{
+  /* sellector grouping */
   width: 940px;
   box-sizing: border-box;
   margin: 0 auto;
