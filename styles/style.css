@@ -35,7 +35,7 @@ body {
   /* em, rem 단위를 사용해보기 */
   font-size: 1.4rem;
   color: #212121;
-  background: #ccc;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 60%, #fff 100%);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
@@ -93,20 +93,59 @@ body {
 
 
 /* 메인 메뉴 */
-.menu {
-  background: #e85e2c
-    linear-gradient(
-      to bottom,
-      #1e5799 0%,
-      #ef9126 0%,
-      #e85e2c 35%,
-      #e85e2c 70%,
-      #ef9126 100%
-    );}
+.navigation {
+  padding-bottom: 80px;
+}
 
+.menu {
+  border-top: 2px solid currentColor;
+  
+  background: #e85e2c linear-gradient(to bottom, 
+  #ef9126 0%,  
+  #e85e2c 35%, 
+  #e85e2c 70%,
+  #ef9126 100% 
+  );
+  border-radius:  0 0 5px 5px;
+  padding-left: 230px;
+  height: 47px;
+}
+
+.menu-item {
+  float: left;
+  border-left: 2px solid white;
+}
+
+.menu-button {
+  border: 0;
+  background: transparent;
+  padding: 0 23px;
+  line-height: 45px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 0px #000, -1px -1px 0px #000
+}
+
+.sub-menu {
+  background-color: pink;
+  position: absolute;
+  display: none;
+}
+
+/* background-color -> 배경색
+background-image -> 배경 이미지
+background-repeat -> 배경 이미지 반복
+background-position -> 배경 이미지 위치
+background-attachment -> 배경 이미지 고정 여부
+background-size -> 배경 이미지 크기 조정 */
+
+/* background -> 공백으로 값과 값 */
+
+    
 /* 비주얼 */
 .visual {
-  background: orange;
+  background-color : orange;
   height: 10vh;
 }
 /* 메인 */
@@ -147,7 +186,7 @@ body {
 
 /* 푸터 */
 .footer {
-  background: gray;
+background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
 }
 
 .footer-inner {
