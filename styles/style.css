@@ -116,6 +116,14 @@ body {
   border-left: 2px solid white;
 }
 
+.sub-menu {
+  background-color: pink;
+  position: absolute;
+  display: none;
+}
+
+
+/* 구체성 -> 10점 */
 .menu-button {
   border: 0;
   background: transparent;
@@ -127,10 +135,15 @@ body {
   text-shadow: 1px 1px 0px #000, -1px -1px 0px #000
 }
 
-.sub-menu {
-  background-color: pink;
-  position: absolute;
-  display: none;
+/* 구체성 -> 20점 */
+.is-active .menu-button {
+  color: yellow;
+}
+
+.is-active .menu-button::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #000;
 }
 
 /* background-color -> 배경색
