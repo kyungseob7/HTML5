@@ -266,7 +266,6 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   animation: moveEffect 400ms ease-in-out forwards;
   position: relative;
-  display: inline-block;
   z-index: 1;
 }
 
@@ -289,12 +288,11 @@ body {
 }
 
 .group2 {
-  background-color: salmon;
   width: 380px;
+  height: 300px;
 }
 
 .group3 {
-  background-color: gold;
   width: 190px;
 }
 
@@ -361,21 +359,22 @@ body {
   background-color: #fff;
   border-radius: 0 0 5px 5px;
   padding: 4px 10px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+}
+.sign li {
+  display: inline-block;
+}
+
+.sign li:first-child {
+  margin-right: 16px;
 }
 
 .sign a {
-  display: block;
+  display: inline-block;
   padding: 6px 0;
   letter-spacing: -1px;
 }
 
 .sign a::before {
-  content: "\e804";
-  font-family: fontello;
-  margin-right: 8px;
   color: orangered;
 }
 
@@ -386,44 +385,35 @@ body {
 
 .validation-list li {
   margin-top: 10px;
-
 }
 
-.validation-list a{
-  display: block;
-  background:url(./images/validation_icon.png) no-repeat 25px 50%,
-   #ccc linear-gradient(to bottom, #ccc, #eee);
-  padding: 8px 15px 8px 50px;
+.validation-list a {
+  background: url("./images/validation_icon.png") no-repeat 25px 50%,
+    #ccc linear-gradient(to bottom, #ccc, #eee);
+  padding: 0 15px 0 55px;
   border-radius: 30px;
+  line-height: 30px;
   border: 1px solid #aaa;
-  /* text-align: center;
-  background-image: url(./images/validation_icon.png);
-  background-repeat: no-repeat;
-  background-position: 30px 10px; */
+  cursor: pointer;
+  display: block;
 }
-
-/* .validation-list a::before {
-  content: url(./images/validation_icon.png);
-  background-color: skyblue;
-  vertical-align: middle;
-} */
 
 .validation-list a:hover,
 .validation-list a:focus {
-  color: red;
+  color: #f00;
 }
 
 /* 웹 관련 용어 */
 .term {
   margin-top: 20px;
-  background: #ccc linear-gradient(to bottom, #ccc, #eee);
   border: 1px solid #aaa;
   border-radius: 5px;
   padding: 10px 15px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
 }
 
 .term-title {
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -436,10 +426,14 @@ body {
   display: flow-root;
 }
 
-.term-list-subject {
-  color: #296897;
+.term-list-subject,
+.term-list-brief {
   float: right;
   width: 145px;
+}
+
+.term-list-subject {
+  color: #296897;
   font-weight: 500;
 }
 
@@ -452,14 +446,8 @@ body {
 }
 
 .term-list-brief {
-  float: right;
-  width: 145px;
   margin-top: 5px;
   line-height: 1.5;
-}
-
-.cross .term-list-thumbnail {
-  float: right;
 }
 
 .cross .term-list-subject,
@@ -467,8 +455,58 @@ body {
   float: left;
 }
 
+.cross .term-list-thumbnail {
+  float: right;
+}
 
+/* 검색 폼 */
+.search-form {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+  /* width: 300px; */
+}
 
+.search-form-inner {
+  /* background-color: yellow; */
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.form-group {
+  /* background-color: pink; */
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-right: 10px;
+}
+.form-group-label {
+  /* background-color: lime; */
+  white-space: nowrap;
+  margin-right: 10px;
+}
+.form-group-input {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 24px;
+  padding: 1px 1px 1px 5px;
+  flex-grow: 1;
+  /* min-width: 0;
+  max-width: 100%; */
+}
+
+.search-button {
+  white-space: nowrap;
+  background-color: #000;
+  color: #fff;
+  height: 24px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
 
 /* 슬로건 */
 .slogan {
